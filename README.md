@@ -1,7 +1,5 @@
 # Portfolio Template - Two Panel Layout
 
-A modern, responsive portfolio website template featuring an elegant two-panel design with smooth animations and collapsible content sections.
-
 ## Features
 
 - **Two-Panel Layout**: Clean, professional design with expandable left and right panels
@@ -182,21 +180,6 @@ The template automatically adapts to different screen sizes:
 - **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **CSS Features Used**: CSS Grid, Flexbox, Custom Properties, Transforms
 - **JavaScript**: ES6+ features (const, let, arrow functions)
-
-## SEO and Performance Tips
-
-1. **Optimize Images**: Compress images before uploading
-2. **Add Alt Text**: Include descriptive alt attributes for all images
-3. **Meta Tags**: Add relevant meta description and keywords
-4. **Page Title**: Update the `<title>` tag with your name/brand
-
-Example meta tags to add:
-
-```html
-<meta name="description" content="Your Name - Portfolio showcasing web development projects">
-<meta name="keywords" content="web developer, portfolio, projects, your skills">
-<meta name="author" content="Your Name">
-```
 
 ## Troubleshooting
 
