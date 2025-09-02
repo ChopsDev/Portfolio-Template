@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Template - Two Panel Layout</title>
+  
+  <!-- Core CSS Files -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/panels.css">
+  <link rel="stylesheet" href="css/panel-dividers.css">
+  <link rel="stylesheet" href="css/collapsible.css">
+
+  <!-- Google Fonts - Feel free to change these -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="no-scroll">
+
+<div class="container">
+  <!-- LEFT PANEL -->
+  <div class="panel left-panel">
+    <h1>LEFT PANEL</h1>
+    <div class="panel-content">
+
+      <!-- Section 1 -->
+      <div class="panel-divider dropdown-header" data-target="section-1">
+        <h2><span>Section 1</span><span class="dropdown-arrow">▼</span></h2>
+      </div>
+      <div class="dropdown-content" id="section-1">
+        
+        <!-- Project 1 -->
+        <div class="project-item">
+          <div class="project-header collapsible button-like">
+            <img src="images/placeholder-logo.png" alt="Project Logo">
+            <div class="button-content">
+              <h2>Project Title 1</h2>
+              <h3>2024 - Present</h3>
+            </div>
+          </div>
+          <div class="content">
+            <div class="flex-container">
+              <div>
+                <p>This is a description of your first project. Replace this text with details about what you built, the technologies you used, and what you learned from the experience.</p>
+                <br>
+                <p>You can add multiple paragraphs to provide more detail about your project. Include information about challenges you faced and how you overcame them.</p>
+                <br>
+                <p>Don't forget to mention any special features or achievements related to this project.</p>
+                <br>
+                <!-- Optional: Add links, images, or embedded content here -->
+                <div class="project-links">
+                  <a href="#" target="_blank">View Project</a> | 
+                  <a href="#" target="_blank">Source Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-item">
+          <div class="project-header collapsible button-like">
+            <img src="images/placeholder-logo.png" alt="Project Logo">
+            <div class="button-content">
+              <h2>Project Title 2</h2>
+              <h3>2023 - 2024</h3>
+            </div>
+          </div>
+          <div class="content">
+            <div class="flex-container">
+              <div>
+                <img src="images/placeholder-preview.png" alt="Project Preview">
+              </div>
+              <div>
+                <p>Description of your second project goes here. You can include images alongside your text by using the flex-container structure.</p>
+                <br>
+                <p>This layout allows for a nice visual presentation of your work with images and text side by side.</p>
+                <br>
+                <div class="project-links">
+                  <a href="#" target="_blank">Live Demo</a> | 
+                  <a href="#" target="_blank">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="panel-divider dropdown-header" data-target="section-2">
+        <h2><span>Section 2</span><span class="dropdown-arrow">▼</span></h2>
+      </div>
+      <div class="dropdown-content" id="section-2">
+        
+        <!-- Project 3 -->
+        <div class="project-item">
+          <div class="project-header collapsible button-like">
+            <img src="images/placeholder-logo.png" alt="Project Logo">
+            <div class="button-content">
+              <h2>Another Project</h2>
+              <h3>2023</h3>
+            </div>
+          </div>
+          <div class="content">
+            <p>Add more projects here following the same structure. You can have as many sections and projects as you need.</p>
+            <br>
+            <p>Each project can have different content - text, images, links, embedded videos, etc.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- MIDDLE SECTION -->
+  <div class="middle">
+    <p>Click a panel to expand it</p>
+  </div>
+  
+  <!-- RIGHT PANEL -->
+  <div class="panel right-panel">
+    <h1>RIGHT PANEL</h1>
+    <div class="panel-content">
+
+      <!-- Section 3 -->
+      <div class="panel-divider dropdown-header" data-target="section-3">
+        <h2><span>Section 3</span><span class="dropdown-arrow">▼</span></h2>
+      </div>
+      <div class="dropdown-content" id="section-3">
+
+        <!-- Item 1 -->
+        <div class="project-item">
+          <div class="project-header collapsible button-like">
+            <div class="button-content">
+              <h2>Right Panel Item 1</h2>
+              <h3>2024</h3>
+            </div>
+          </div>
+          <div class="content">
+            <p>This is the right panel. You can use it for different types of content - maybe your skills, education, or other projects.</p>
+            <br>
+            <p>The structure is the same as the left panel, so you can add images, links, and any other content you need.</p>
+            <img src="images/placeholder-image.png" alt="Placeholder Image">
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="panel-divider dropdown-header" data-target="section-4">
+        <h2><span>Section 4</span><span class="dropdown-arrow">▼</span></h2>
+      </div>
+      <div class="dropdown-content" id="section-4">
+        
+        <!-- Item 2 -->
+        <div class="project-item">
+          <div class="project-header collapsible button-like">
+            <div class="button-content">
+              <h2>Right Panel Item 2</h2>
+              <h3>2023</h3>
+            </div>
+          </div>
+          <div class="content">
+            <p>Add more content here. You can customize the sections and items to fit your needs.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Configuration and Scripts -->
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

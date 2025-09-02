@@ -1,0 +1,218 @@
+/* Portfolio Template - Panel Styles */
+/* This file handles the main panel layout and animations */
+
+.panel {
+  /* Default transition for closing - linear and immediate */
+  transition: width 0.15s linear, transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  width: var(--panel-width);
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.panel:not(.expanded):hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.panel.expanding {
+  /* Smooth transition for opening */
+  transition: width var(--transition-duration) var(--transition-timing);
+}
+
+/* Panel Headings */
+.panel h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--text-color);
+  white-space: nowrap;
+  margin: 0;
+  font-family: "Archivo Black", serif;
+  font-size: clamp(1.5rem, 4.5vw, 3rem);
+  transition: opacity 0.3s ease;
+}
+
+.left-panel h1 {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.right-panel h1 {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.panel h1.slide-left,
+.panel h1.slide-right {
+  opacity: 1;
+}
+
+.left-panel.expanded h1,
+.right-panel.expanded h1 {
+  opacity: 0;
+  font-size: 75px;
+}
+
+/* Left Panel Styling */
+.left-panel {
+  background-color: var(--left-panel-bg);
+  background-image: var(--left-panel-gradient);
+  border-right: 2px solid var(--border-color);
+}
+
+.left-panel:not(.expanded):hover {
+  background-image: var(--left-panel-hover);
+  border-right: 2px solid var(--border-hover-color);
+}
+
+/* Right Panel Styling */
+.right-panel {
+  background-color: var(--right-panel-bg);
+  background-image: var(--right-panel-gradient);
+  margin-left: auto;
+  border-left: 2px solid var(--border-color);
+}
+
+.right-panel:not(.expanded):hover {
+  background-image: var(--right-panel-hover);
+  border-left: 2px solid var(--border-hover-color);
+}
+
+/* Panel Content */
+.panel-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.panel-content {
+  transition: opacity 0.2s ease-out, visibility 0.025s ease-out;
+}
+
+.panel-content.visible {
+  transition: opacity .15s cubic-bezier(0.7, 0, 0.84, 0), visibility .025s cubic-bezier(0.7, 0, 0.84, 0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.panel p {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.panel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Expanded Panel States */
+.panel.expanded {
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+
+.panel.expanded:hover {
+  transform: none;
+  box-shadow: none;
+  filter: none;
+}
+
+.left-panel.expanded,
+.right-panel.expanded {
+  width: calc(100% - var(--panel-width));
+  background-image: none;
+  border: none;
+  background-color: var(--expanded-panel-bg);
+}
+
+/* Project Item Styling */
+.project-item {
+  margin-bottom: 20px;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.project-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.button-content h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+.button-content h3 {
+  margin: 5px 0 0 0;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Scrollbar Styling */
+.panel-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.panel-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.panel-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.panel-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .panel h1 {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+  
+  .left-panel.expanded h1,
+  .right-panel.expanded h1 {
+    font-size: 50px;
+  }
+  
+  .panel-content {
+    padding: 15px;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .project-header img {
+    width: 80px;
+    height: 80px;
+  }
+}

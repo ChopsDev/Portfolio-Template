@@ -1,0 +1,142 @@
+/* Portfolio Template - Panel Dividers Styles */
+/* This file handles the section headers and dropdown functionality */
+
+.panel-divider {
+  background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 10px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4a9eff;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.panel-divider:hover {
+  background: linear-gradient(135deg, #3a3a3a 0%, #4a4a4a 100%);
+  border-left-color: #66b3ff;
+  transform: translateX(5px);
+}
+
+.panel-divider.active {
+  background: linear-gradient(135deg, #3a3a3a 0%, #4a4a4a 100%);
+  border-left-color: #66b3ff;
+}
+
+.panel-divider h2 {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Lexend', sans-serif;
+}
+
+.panel-divider h2 span:first-child {
+  flex-grow: 1;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+  color: #4a9eff;
+}
+
+.panel-divider.active .dropdown-arrow {
+  transform: rotate(180deg);
+  color: #66b3ff;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  margin: 0 20px;
+}
+
+.dropdown-content.show {
+  max-height: 5000px; /* Large enough to accommodate all content */
+}
+
+/* Animation for dropdown content */
+.dropdown-content > * {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+}
+
+.dropdown-content.show > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation for multiple items */
+.dropdown-content.show > *:nth-child(1) { transition-delay: 0.1s; }
+.dropdown-content.show > *:nth-child(2) { transition-delay: 0.2s; }
+.dropdown-content.show > *:nth-child(3) { transition-delay: 0.3s; }
+.dropdown-content.show > *:nth-child(4) { transition-delay: 0.4s; }
+.dropdown-content.show > *:nth-child(5) { transition-delay: 0.5s; }
+
+/* Focus and accessibility */
+.panel-divider:focus {
+  outline: 2px solid #4a9eff;
+  outline-offset: 2px;
+}
+
+.panel-divider:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .panel-divider {
+    margin: 10px 15px;
+    padding: 12px 15px;
+  }
+  
+  .panel-divider h2 {
+    font-size: 1.1rem;
+  }
+  
+  .dropdown-arrow {
+    font-size: 0.7rem;
+  }
+  
+  .dropdown-content {
+    margin: 0 15px;
+  }
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+  .panel-divider {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  }
+  
+  .panel-divider:hover,
+  .panel-divider.active {
+    background: linear-gradient(135deg, #2a2a2a 0%, #3a3a3a 100%);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .panel-divider {
+    border-left-width: 6px;
+    border-left-color: #ffffff;
+  }
+  
+  .panel-divider:hover,
+  .panel-divider.active {
+    border-left-color: #ffffff;
+    background: #000000;
+  }
+  
+  .dropdown-arrow {
+    color: #ffffff;
+  }
+}

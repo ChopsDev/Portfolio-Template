@@ -1,0 +1,114 @@
+/* Portfolio Template - Base Styles */
+/* This file contains the core layout and fundamental styling */
+
+:root {
+  /* Customizable Variables - Change these to modify the template */
+  --panel-width: 175px;
+  --transition-duration: 0.3s;
+  --transition-timing: cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Color Variables - Customize your color scheme here */
+  --left-panel-bg: #333;
+  --left-panel-gradient: linear-gradient(135deg, #333 0%, #444 100%);
+  --left-panel-hover: linear-gradient(135deg, #444 0%, #555 100%);
+  --right-panel-bg: #555;
+  --right-panel-gradient: linear-gradient(135deg, #555 0%, #666 100%);
+  --right-panel-hover: linear-gradient(135deg, #666 0%, #777 100%);
+  --expanded-panel-bg: #2a2a2a;
+  --text-color: white;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-hover-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Reset and Base Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Lexend', sans-serif;
+}
+
+/* Scroll Control */
+body.no-scroll {
+  overflow: hidden;
+}
+
+body.allow-scroll {
+  overflow: auto;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Middle Section */
+.middle {
+  flex: 1;
+  width: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+  color: var(--text-color);
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.middle.shrink {
+  flex: 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Utility Classes */
+.flex-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-links a {
+  color: #4a9eff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: #66b3ff;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --panel-width: 120px;
+  }
+  
+  .middle {
+    font-size: 3vw;
+  }
+  
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .flex-container > div {
+    min-width: unset;
+  }
+}
