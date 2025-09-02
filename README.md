@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website template featuring an elegant two-panel design with smooth animations and collapsible content sections.
 
-## 🌟 Features
+## Features
 
 - **Two-Panel Layout**: Clean, professional design with expandable left and right panels
 - **Smooth Animations**: Fluid transitions and hover effects for enhanced user experience
@@ -12,7 +12,7 @@ A modern, responsive portfolio website template featuring an elegant two-panel d
 - **Accessible**: Built with accessibility best practices in mind
 - **Modern CSS**: Uses CSS Grid, Flexbox, and custom properties for maintainable code
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Download the template** and extract it to your desired location
 2. **Replace placeholder content** in `index.html` with your own information
@@ -20,7 +20,7 @@ A modern, responsive portfolio website template featuring an elegant two-panel d
 4. **Customize colors and fonts** in `css/base.css`
 5. **Open `index.html`** in your browser to view your portfolio
 
-## 📁 File Structure
+## File Structure
 
 ```
 portfolio-template/
@@ -40,7 +40,7 @@ portfolio-template/
     └── (example configurations will be added here)
 ```
 
-## 🎨 Customization Guide
+## Customization Guide
 
 ### Changing Colors
 
@@ -96,7 +96,7 @@ Adjust animation timing in `css/base.css`:
 }
 ```
 
-## 📝 Content Structure
+## Content Structure
 
 ### Adding New Projects
 
@@ -155,7 +155,7 @@ rightHeading.textContent = "YOUR RIGHT TITLE"
 leftHeading.textContent = "YOUR LEFT TITLE"
 ```
 
-## 🖼️ Image Guidelines
+## Image Guidelines
 
 ### Recommended Image Sizes
 
@@ -169,7 +169,7 @@ leftHeading.textContent = "YOUR LEFT TITLE"
 - **Screenshots**: JPG or PNG
 - **Icons**: SVG (scalable) or PNG
 
-## 📱 Responsive Behavior
+## Responsive Behavior
 
 The template automatically adapts to different screen sizes:
 
@@ -177,13 +177,13 @@ The template automatically adapts to different screen sizes:
 - **Tablet (768px)**: Adjusted spacing and font sizes
 - **Mobile (<768px)**: Stacked layout with touch-friendly interactions
 
-## 🔧 Browser Support
+## Browser Support
 
 - **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
 - **CSS Features Used**: CSS Grid, Flexbox, Custom Properties, Transforms
 - **JavaScript**: ES6+ features (const, let, arrow functions)
 
-## 🎯 SEO and Performance Tips
+## SEO and Performance Tips
 
 1. **Optimize Images**: Compress images before uploading
 2. **Add Alt Text**: Include descriptive alt attributes for all images
@@ -198,7 +198,7 @@ Example meta tags to add:
 <meta name="author" content="Your Name">
 ```
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -217,39 +217,15 @@ Example meta tags to add:
 - Check browser developer tools for errors
 - Ensure CSS custom properties are supported
 
-### Browser Developer Tools
-
-Use F12 to open developer tools and check:
-- **Console**: For JavaScript errors
-- **Network**: For failed file loads
-- **Elements**: To inspect CSS styles
-
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues and enhancement requests! This template is designed to be:
 - Easy to understand and modify
 - Well-documented and commented
 - Accessible and performant
 
-## 📄 License
+## License
 
 This template is free to use for personal and commercial projects. Attribution is appreciated but not required.
 
-## 🔗 Credits
 
-- **Original Design**: Based on a portfolio website concept
-- **Fonts**: Google Fonts (Archivo Black, Lexend)
-- **Icons**: Unicode arrows and symbols
-
----
-
-## 📞 Need Help?
-
-If you need assistance customizing this template:
-
-1. Check this README for common solutions
-2. Look at the CSS comments for guidance
-3. Use browser developer tools to debug issues
-4. Consider the examples in the `examples/` folder
-
-**Happy coding! 🎉**
