@@ -18,8 +18,8 @@ function closeAll() {
 
   leftPanel.classList.remove('expanded', 'expanding');
   rightPanel.classList.remove('expanded', 'expanding');
-  leftHeading.classList.remove('slide-left');
-  rightHeading.classList.remove('slide-right');
+  leftHeading.classList.remove('slide-left', 'hidden');
+  rightHeading.classList.remove('slide-right', 'hidden');
   leftContent.classList.remove('visible');
   rightContent.classList.remove('visible');
   middle.classList.remove('shrink');
@@ -33,7 +33,7 @@ function closeAll() {
 function expandLeft() {
   closeAll();
   toggleScroll(true);
-  leftHeading.classList.add('slide-left');
+  leftHeading.classList.add('slide-left', 'hidden');
   leftPanel.classList.add('expanding', 'expanded');
   middle.classList.add('shrink');
 
@@ -45,7 +45,7 @@ function expandLeft() {
 function expandRight() {
   closeAll();
   toggleScroll(true);
-  rightHeading.classList.add('slide-right');
+  rightHeading.classList.add('slide-right', 'hidden');
   rightPanel.classList.add('expanding', 'expanded');
   middle.classList.add('shrink');
 

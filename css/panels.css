@@ -25,7 +25,6 @@
 .panel h1 {
   position: absolute;
   top: 50%;
-  left: 50%;
   color: var(--text-color);
   white-space: nowrap;
   margin: 0;
@@ -34,12 +33,17 @@
   transition: opacity 0.3s ease;
 }
 
+/* Left panel heading - always stays at left edge center */
 .left-panel h1 {
+  left: calc(var(--panel-width) / 2);
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 
+/* Right panel heading - always stays at right edge center */
 .right-panel h1 {
-  transform: translate(-50%, -50%) rotate(90deg);
+  right: calc(var(--panel-width) / 2);
+  left: auto;
+  transform: translate(50%, -50%) rotate(90deg);
 }
 
 .panel h1.slide-left,
@@ -47,17 +51,8 @@
   opacity: 1;
 }
 
-.left-panel.expanded h1 {
-  opacity: 0;
-  font-size: 75px;
-  left: calc(var(--panel-width) / 2);
-}
-
-.right-panel.expanded h1 {
-  opacity: 0;
-  font-size: 75px;
-  left: auto;
-  right: calc(var(--panel-width) / 2);
+.panel h1.hidden {
+  display: none;
 }
 
 /* Left Panel Styling */
@@ -202,28 +197,17 @@
   .panel h1 {
     font-size: clamp(1rem, 3vw, 2rem);
   }
-  
-  .left-panel.expanded h1 {
-    font-size: 50px;
-    left: calc(var(--panel-width) / 2);
-  }
 
-  .right-panel.expanded h1 {
-    font-size: 50px;
-    left: auto;
-    right: calc(var(--panel-width) / 2);
-  }
-  
   .panel-content {
     padding: 15px;
   }
-  
+
   .project-header {
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
-  
+
   .project-header img {
     width: 80px;
     height: 80px;
